@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig>
+  <Tracking>
+    <ImageTarget name="banana-crop-with-bg" size="0.080000 0.113098" />
+    <ImageTarget name="banana-crop2" size="0.080000 0.173412" />
+    <ImageTarget name="banana-crop" size="0.100000 0.216765" />
+    <ImageTarget name="snacks" size="0.150000 0.120700" />
+  </Tracking>
+</QCARConfig>
