@@ -7,7 +7,9 @@ public class SimpleCloudRecoEventHandler : MonoBehaviour
     bool mIsScanning = false;
     string mTargetMetadata = "";
 
-    public GameObject ImageTargetTemplate;
+    public ImageTargetBehaviour ImageTargetTemplate;
+    public GameObject BananaUI;
+    public GameObject SnacksUI;
 
     // Register cloud reco callbacks
     void Awake()
@@ -51,6 +53,11 @@ public class SimpleCloudRecoEventHandler : MonoBehaviour
         // Store the target metadata
         mTargetMetadata = cloudRecoSearchResult.MetaData;
 
+        if (mTargetMetadata != "snacks" && mTargetMetadata != "banana")
+        {
+            mTargetMetadata = "unknown metadata";
+        }
+
         // Stop the scanning by disabling the behaviour
         mCloudRecoBehaviour.enabled = false;
 
@@ -59,6 +66,15 @@ public class SimpleCloudRecoEventHandler : MonoBehaviour
         {
             /* Enable the new result with the same ImageTargetBehaviour: */
             mCloudRecoBehaviour.EnableObservers(cloudRecoSearchResult, ImageTargetTemplate.gameObject);
+        }
+
+        if (mTargetMetadata == "banana" && BananaUI)
+        {
+            BananaUI.SetActive(true);
+        }
+        else if (mTargetMetadata == "snacks" && SnacksUI)
+        {
+            SnacksUI.SetActive(true);
         }
     }
 
@@ -90,6 +106,8 @@ public class SimpleCloudRecoEventHandler : MonoBehaviour
         if (scanning)
         {
             mCloudRecoBehaviour.ClearObservers(false);
+            SnacksUI.SetActive(false);
+            BananaUI.SetActive(false);
         }
     }
 }

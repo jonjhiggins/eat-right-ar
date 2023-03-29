@@ -136,12 +136,12 @@ GameObject:
   - component: {fileID: 138018166}
   - component: {fileID: 138018165}
   m_Layer: 0
-  m_Name: Plane
+  m_Name: BananaUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &138018164
 Transform:
   m_ObjectHideFlags: 0
@@ -234,12 +234,12 @@ GameObject:
   - component: {fileID: 390181885}
   - component: {fileID: 390181884}
   m_Layer: 0
-  m_Name: Plane (1)
+  m_Name: SnacksUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &390181883
 Transform:
   m_ObjectHideFlags: 0
@@ -762,6 +762,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ImageTargetTemplate: {fileID: 0}
+  BananaUI: {fileID: 0}
+  SnacksUI: {fileID: 0}
 --- !u!114 &1316896305
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1241,7 +1243,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2172c61258d504043aa512f32237e167, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ImageTargetTemplate: {fileID: 1316896297}
+  ImageTargetTemplate: {fileID: 1316896301}
+  BananaUI: {fileID: 138018163}
+  SnacksUI: {fileID: 390181882}
 --- !u!114 &1954053743
 MonoBehaviour:
   m_ObjectHideFlags: 0
